@@ -1,3 +1,9 @@
 body {
   background-color: #e9edf5;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

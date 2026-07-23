@@ -25,6 +25,6 @@ export class Buttons {
   }
 
   calculate() {
-    this.calculator.calcular();
+    this.calculator.calculate();
   }
 }

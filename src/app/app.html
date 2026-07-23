@@ -5,7 +5,11 @@
   </div>
   <div class="buttons">
     <button class="delete" (click)="reset()">Limpar</button>
-    <button class="history">Histórico</button>
+    <button class="history" (click)="history()">Histórico</button>
     <button class="reset" (click)="delete()">Corrigir</button>
   </div>
 </div>
+
+@if (calculator.showHistory()){
+  <app-modal/>
+}

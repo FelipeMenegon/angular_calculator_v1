@@ -1,0 +1,11 @@
+<div class="overlay" (click)="history()">
+    <div class="modal" (click)="$event.stopPropagation()">
+        <h2>Histórico</h2>
+        <div class="modal-content">
+            @for (item of calculator.history(); track $index) {
+            <p>{{ item }}</p>
+            }
+        </div>
+        <button (click)="history()">Fechar</button>
+    </div>
+</div>
