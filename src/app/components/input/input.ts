@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { MatFormFieldModule, } from '@angular/material/form-field';
+import { Component, effect } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DisplayService } from '../../services/display';
 
 @Component({
   selector: 'app-input',
@@ -8,4 +9,10 @@ import { MatInputModule } from '@angular/material/input';
   templateUrl: './input.html',
   styleUrl: './input.css',
 })
-export class Input {}
+export class Input {
+  constructor(public calculator: DisplayService) {
+    effect(() => {
+      console.log('Input:', this.calculator.display);
+    });
+  }
+}

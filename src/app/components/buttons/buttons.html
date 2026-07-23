@@ -1,17 +1,20 @@
 <div class="buttons">
-  <div class="button">7</div>
-  <div class="button">8</div>
-  <div class="button">9</div>
-  <div id="op" class="button">/</div>
-  <div class="button">4</div>
-  <div class="button">5</div>
-  <div class="button">6</div>
-  <div id="op" class="button">X</div>
-  <div class="button">1</div>
-  <div class="button">2</div>
-  <div class="button">3</div>
-  <div id="op" class="button">-</div>
-  <div class="button-0">0</div>
-  <div id="op" class="button">=</div>
-  <div id="op" class="button">+</div>
+  <button class="button" (click)="adicionar('7')">7</button>
+  <button class="button" (click)="adicionar('8')">8</button>
+  <button class="button" (click)="adicionar('9')">9</button>
+  <button class="button op" (click)="adicionar('/')">/</button>
+
+  <button class="button" (click)="adicionar('4')">4</button>
+  <button class="button" (click)="adicionar('5')">5</button>
+  <button class="button" (click)="adicionar('6')">6</button>
+  <button class="button op" (click)="adicionar('*')">×</button>
+
+  <button class="button" (click)="adicionar('1')">1</button>
+  <button class="button" (click)="adicionar('2')">2</button>
+  <button class="button" (click)="adicionar('3')">3</button>
+  <button class="button op" (click)="adicionar('-')">-</button>
+
+  <button class="button-0" (click)="adicionar('0')">0</button>
+  <button class="button op" (click)="adicionar('=')">=</button>
+  <button class="button op" (click)="adicionar('+')">+</button>
 </div>

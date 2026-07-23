@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DisplayService } from '../../services/display';
 
 @Component({
   selector: 'app-buttons',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './buttons.html',
   styleUrl: './buttons.css',
 })
-export class Buttons {}
+export class Buttons {
+  constructor(public calculator: DisplayService) {}
+
+  adicionar(value: string) {
+    this.calculator.display.update((texto) => texto + value);
+  }
+}
