@@ -1,0 +1,20 @@
+.base {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.basecalculator {
+    background-color: grey;
+    height: 700px;
+    width: 500px;
+    border-radius: 30px;
+    padding: 50px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-rows: 150px;
+    gap: 50px;
+}
+
