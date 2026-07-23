@@ -17,20 +17,26 @@
 
   width: 100%;
   height: 100%;
-
-  background-color: rgb(68, 68, 68);
+  background-color: #3b4252;
   border-radius: 10px;
 
   color: #fff;
   font-size: 26px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+  transition:
+    background-color 0.2s,
+    transform 0.1s,
+    box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
   transition: background-color 0.2s;
 }
 
 .button:hover,
 .button-0:hover {
-  background-color: rgb(61, 61, 61);
+  transform: translateY(-2px);
+  background-color: #434a5c;
 }
 
 .button-0 {
@@ -38,10 +44,19 @@
 }
 
 .op {
-  background-color: rgb(206, 148, 42);
+  background-color: #3b82f6;
   font-weight: bold;
 }
 
 .op:hover {
-  background-color: rgb(194, 137, 31);
+  background-color: #60a5fa;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+
+.active {
+  background-color: #60a5fa;
+}
+
+.active:hover {
+  background-color: #93c5fd;
 }

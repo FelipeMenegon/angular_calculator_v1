@@ -10,7 +10,21 @@ import { DisplayService } from '../../services/display';
 export class Buttons {
   constructor(public calculator: DisplayService) {}
 
-  adicionar(value: string) {
+  add(value: string) {
+    if (this.calculator.showResults()) {
+      this.calculator.display.set('');
+      this.calculator.showResults.set(false);
+    }
     this.calculator.display.update((texto) => texto + value);
+    this.calculator.showResults.set(false);
+  }
+
+  addOp(operacao: string) {
+    this.calculator.selecionarOperacao(operacao);
+    this.calculator.showResults.set(false);
+  }
+
+  calculate() {
+    this.calculator.calcular();
   }
 }

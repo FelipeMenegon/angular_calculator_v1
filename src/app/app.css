@@ -1,22 +1,27 @@
 .base {
-    display: grid;
-    justify-content: center;
-    align-content:  center;
-    gap: 30px;
-    height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  height: 100vh;
 }
 
 .basecalculator {
-    background-color: grey;
-    height: 700px;
-    width: 500px;
-    border-radius: 30px;
-    padding: 50px;
-    box-sizing: border-box;
+  background-color: #2B2F38;
+  height: 700px;
+  width: 500px;
+  border-radius: 30px;
+  padding: 50px;
+  box-sizing: border-box;
 
-    display: grid;
-    grid-template-rows: 150px;
-    gap: 50px;
+  display: grid;
+  grid-template-rows: 150px;
+  gap: 50px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .delete {
@@ -39,4 +44,48 @@
 
 .delete:hover {
   background-color: #d23737;
+}
+
+.reset {
+  width: 100%;
+  height: 50px;
+
+  background-color: #df9d18;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reset:hover {
+  background-color: #d19317;
+}
+
+.history {
+  width: 100%;
+  height: 50px;
+
+  background-color: #3b82f6;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history:hover {
+  background-color: #3676dd;;
 }

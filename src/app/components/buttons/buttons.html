@@ -1,20 +1,20 @@
 <div class="buttons">
-  <button class="button" (click)="adicionar('7')">7</button>
-  <button class="button" (click)="adicionar('8')">8</button>
-  <button class="button" (click)="adicionar('9')">9</button>
-  <button class="button op" (click)="adicionar('/')">/</button>
+  <button class="button" (click)="add('7')">7</button>
+  <button class="button" (click)="add('8')">8</button>
+  <button class="button" (click)="add('9')">9</button>
+  <button class="button op" [class.active]="calculator.currentOp() === '/'" (click)="addOp('/')">/</button>
 
-  <button class="button" (click)="adicionar('4')">4</button>
-  <button class="button" (click)="adicionar('5')">5</button>
-  <button class="button" (click)="adicionar('6')">6</button>
-  <button class="button op" (click)="adicionar('*')">×</button>
+  <button class="button" (click)="add('4')">4</button>
+  <button class="button" (click)="add('5')">5</button>
+  <button class="button" (click)="add('6')">6</button>
+  <button class="button op" [class.active]="calculator.currentOp() === '*'" (click)="addOp('*')">X</button>
 
-  <button class="button" (click)="adicionar('1')">1</button>
-  <button class="button" (click)="adicionar('2')">2</button>
-  <button class="button" (click)="adicionar('3')">3</button>
-  <button class="button op" (click)="adicionar('-')">-</button>
+  <button class="button" (click)="add('1')">1</button>
+  <button class="button" (click)="add('2')">2</button>
+  <button class="button" (click)="add('3')">3</button>
+  <button class="button op" [class.active]="calculator.currentOp() === '-'" (click)="addOp('-')">-</button>
 
-  <button class="button-0" (click)="adicionar('0')">0</button>
-  <button class="button op" (click)="adicionar('=')">=</button>
-  <button class="button op" (click)="adicionar('+')">+</button>
+  <button class="button-0" (click)="add('0')">0</button>
+  <button class="button op" (click)="calculate()">=</button>
+  <button class="button op" [class.active]="calculator.currentOp() === '+'" (click)="addOp('+')">+</button>
 </div>

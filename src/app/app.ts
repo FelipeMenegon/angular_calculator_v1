@@ -16,5 +16,11 @@ export class App {
 
   reset(){
     this.calculator.display.set('');
+    this.calculator.firstValue.set(null);
+    this.calculator.currentOp.set('');
+  }
+
+  delete(){
+    this.calculator.display.update((value) => value.slice(0, -1));
   }
 }

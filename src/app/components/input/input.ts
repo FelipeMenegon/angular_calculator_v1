@@ -10,9 +10,5 @@ import { DisplayService } from '../../services/display';
   styleUrl: './input.css',
 })
 export class Input {
-  constructor(public calculator: DisplayService) {
-    effect(() => {
-      console.log('Input:', this.calculator.display);
-    });
-  }
+  constructor(public calculator: DisplayService) {}
 }
