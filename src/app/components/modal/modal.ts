@@ -9,7 +9,11 @@ import { DisplayService } from '../../services/display';
 })
 export class Modal {
   constructor(public calculator: DisplayService) {}
-  history() {
+  historyClose() {
     this.calculator.showHistory.update((value) => !value);
+  }
+
+  historyClear(){
+    this.calculator.clearHistory();
   }
 }

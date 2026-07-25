@@ -8,8 +8,8 @@
 
 .basecalculator {
   background-color: #2B2F38;
-  height: 700px;
-  width: 500px;
+  width: min(500px, 95vw);
+  height: min(700px, 95vw);;
   border-radius: 30px;
   padding: 50px;
   box-sizing: border-box;
@@ -89,4 +89,3 @@
 .history:hover {
   background-color: #3676dd;;
 }
-

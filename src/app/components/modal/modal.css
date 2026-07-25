@@ -43,13 +43,18 @@
   margin-bottom: 0;
 }
 
+.modal-flex {
+  display: flex;
+  gap: 4px;
+}
+
 h2 {
   font-size: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 }
 
-button {
+.btnClose {
   height: 50px;
   width: 100%;
   border-radius: 20px;
@@ -62,8 +67,25 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+.btnClose:hover {
   background-color: rgb(35, 78, 186);
+}
+
+.btnClear {
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #d53e3e;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnClear:hover {
+  background-color: #c12d2d;
 }
 
 @keyframes fadeIn {

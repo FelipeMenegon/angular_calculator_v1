@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ export class DisplayService {
   currentOp = signal('');
   firstValue = signal<number | null>(null);
   showResults = signal(false);
-  history = signal<string[]>([]);
+  history = signal<string[]>(JSON.parse(localStorage.getItem('history') ?? '[]'));
   showHistory = signal(false);
 
   selecionarOperacao(operacao: string) {
@@ -18,6 +19,11 @@ export class DisplayService {
     }
     this.currentOp.set(operacao);
     this.showResults.set(false);
+  }
+
+  clearHistory() {
+    this.history.set([]);
+    localStorage.removeItem('history');
   }
 
   calculate() {
@@ -44,10 +50,13 @@ export class DisplayService {
         break;
     }
 
-    this.history.update((history) => [
-      `${firstValue}⠀${op}⠀${secondValue}⠀=⠀${resultado}`,
-      ...history,
-    ]);
+    this.history.update((history) => {
+      const novoHistorico = [`${firstValue} ${op} ${secondValue} = ${resultado}`, ...history];
+
+      localStorage.setItem('history', JSON.stringify(novoHistorico));
+
+      return novoHistorico;
+    });
 
     this.display.set(resultado.toString());
     this.currentOp.set('');
