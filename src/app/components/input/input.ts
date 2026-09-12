@@ -1,11 +1,9 @@
 import { Component, effect } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { DisplayService } from '../../services/display';
 
 @Component({
   selector: 'app-input',
-  imports: [MatFormFieldModule, MatInputModule],
+  imports: [],
   templateUrl: './input.html',
   styleUrl: './input.css',
 })

@@ -1,5 +1,4 @@
 import { Injectable, signal } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +32,14 @@ export class DisplayService {
     if (firstValue === null) return;
 
     const op = this.currentOp();
+
+    if (op === '/' && secondValue === 0) {
+      this.display.set('Erro');
+      this.currentOp.set('');
+      this.firstValue.set(null);
+      this.showResults.set(true);
+      return;
+    }
 
     let resultado = 0;
     switch (this.currentOp()) {
